@@ -11,7 +11,10 @@ def main(language_file, encoding, errors):
 def print_line(line, encoding, errors):
     next_lang = line.strip()
     raw_bytes = next_lang.encode(encoding, errors=errors)
-    cooked_sctring = raw_bytes.decode(encoding, erros=errors)
+    cooked_sctring = raw_bytes.decode(encoding, errors=errors)
 
     print(raw_bytes, "<===>", cooked_sctring)
-    
+
+languages = open("languages.txt", encoding="utf-8")
+
+main(languages, encoding, error)
